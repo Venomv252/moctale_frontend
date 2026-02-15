@@ -1,7 +1,7 @@
 // import React from "react";
 import Landingmain from "./components/Landingmain";
-import Navbar from "./components/Navbar";
-import Footer from "./components/footer";
+import Navbar from "./components/Navbar.jsx";
+import Footer from "./components/Footer.jsx";
 
 
 const Landing = () =>{

@@ -1,7 +1,7 @@
 import React from "react";
 import BubbleBackground from "./Bubblebackground";
 import GOT from "../../../assets/Series-Posters/Got.jpg";
-import Footer from "./footer";
+
 
 const Landingmain = () => {
   return (

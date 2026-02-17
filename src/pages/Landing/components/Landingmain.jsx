@@ -18,7 +18,7 @@ import TDN from "../../../assets/Anime-Poster/TDN.jpg"
 import DBZ from "../../../assets/Anime-Poster/DBZ.jpg"
 import Naruto from "../../../assets/Anime-Poster/Naruto.jpg"
 import SL from "../../../assets/Anime-Poster/SL.jpg"
-import suits from "../../../assets/Series-Posters/suits.jpg"
+import suits from "../../../assets/Series-Posters/Suits.jpg"
 
 
 const Landingmain = () => {

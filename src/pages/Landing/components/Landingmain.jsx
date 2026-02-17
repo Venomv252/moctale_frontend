@@ -71,13 +71,13 @@ const Landingmain = () => {
                   </div>
                   <div className="flex flex-col gap-4 transitiom-transform duration-300 -translate-y-12 md:-translate-y-24">
                     <div className="relative w-full aspect-[2/3] rounded-lg overflow-hidden bg-neutral-900">
-                    <img alt ="Movie poster 1" decoding="async" loading="lazy" data-nimg ="fill" className="object-cover absolute h-[100%] w-full inset-0 text-transparent" src={BBS5} style={{}}/>
+                    <img alt ="Movie poster 1" decoding="async" loading="lazy" data-nimg ="fill" className="object-cover  h-[100%] w-full inset-0 text-transparent" src={BBS5} style={{}}/>
                     </div>
                     <div className="relative w-full aspect-[2/3] rounded-lg overflow-hidden bg-neutral-900">
-                    <img alt ="Movie poster 1" decoding="async" loading="lazy" data-nimg ="fill" className="object-cover absolute h-[100%] w-full inset-0 text-transparent" src={DPS} style={{}}/>
+                    <img alt ="Movie poster 1" decoding="async" loading="lazy" data-nimg ="fill" className="object-cover absolute h-[300px] w-full inset-0 text-transparent" src={DPS} style={{}}/>
                     </div>
                     <div className="relative w-full aspect-[2/3] rounded-lg overflow-hidden bg-neutral-900">
-                    <img alt ="Movie poster 1" decoding="async" loading="lazy" data-nimg ="fill" className="object-cover absolute h-[100%] w-full inset-0 text-transparent" src={HP} style={{}}/>
+                    <img alt ="Movie poster 1" decoding="async" loading="lazy" fetchpriority="low" data-nimg ="fill" className="object-cover absolute h-[100%]   w-full inset-0 text-transparent" src={HP} style={{}}/>
                     </div>
                   </div>
                   <div className="flex flex-col gap-4 transitiom-transform duration-300">

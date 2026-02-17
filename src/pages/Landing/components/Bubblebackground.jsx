@@ -16,7 +16,7 @@ const BubbleBackground = () => {
     window.addEventListener("resize", resize);
 
     const BUBBLE_COUNT = 5;
-    const RADIUS = 120;
+    const RADIUS = window.innerWidth < 768 ? 60 : 120;
 
     // ---- Create bubble without overlap ----
     function createBubble(existing) {
@@ -100,6 +100,7 @@ const BubbleBackground = () => {
         ctx.arc(b.x, b.y, b.r, 0, Math.PI * 2);
         ctx.fillStyle = "rgba(176, 72, 255, 0.45)";
         ctx.shadowBlur = 50;
+        if(window.innerWidth < 768) ctx.shadowBlur = 0;
         ctx.shadowColor = "rgba(143, 68, 240, 0.9)";
         ctx.fill();
       }

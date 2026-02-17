@@ -1,2 +1,6 @@
 @import "tailwindcss";
 
+#nprogress .bar{
+    background: #740DF6 !important;
+    height: 3px !important;
+}

@@ -1,6 +1,24 @@
 import React from "react";
 import BubbleBackground from "./Bubblebackground";
 import GOT from "../../../assets/Series-Posters/Got.jpg";
+import TSsR from "../../../assets/Movies Posters/shawshank_redemption.jpg"
+import TWoWS from "../../../assets/Movies Posters/TWoWS.jpg"
+import BB from "../../../assets/Movies Posters/BB.jpg"
+import BBS5 from "../../../assets/Series-Posters/BBS5.jpg"
+import AKOSK from "../../../assets/Series-Posters/AKOSK.jpg"
+import DS6 from "../../../assets/Series-Posters/DS6.jpg"
+import Panchayat from "../../../assets/Series-Posters/Panchayat.jpg"
+import DPS from "../../../assets/Movies Posters/DPS.jpg"
+import HP from "../../../assets/Movies Posters/HP.jpg"
+import TMW from "../../../assets/Movies Posters/TMW.jpg"
+import TGF from "../../../assets/Movies Posters/TGF.jpg"
+import Accepted from "../../../assets/Movies Posters/Accepted.jpg"
+import Avengers from "../../../assets/Movies Posters/Avengers-Doomsday.jpg"
+import TDN from "../../../assets/Anime-Poster/TDN.jpg"
+import DBZ from "../../../assets/Anime-Poster/DBZ.jpg"
+import Naruto from "../../../assets/Anime-Poster/Naruto.jpg"
+import SL from "../../../assets/Anime-Poster/SL.jpg"
+import suits from "../../../assets/Series-Posters/suits.jpg"
 
 
 const Landingmain = () => {
@@ -42,10 +60,10 @@ const Landingmain = () => {
                     <img alt ="Movie poster 1" decoding="async" data-nimg ="fill" className="object-cover absolute h-[100%] w-full inset-0 text-transparent" src={GOT} style={{}}/>
                     </div>
                     <div className="relative w-full aspect-[2/3] rounded-lg overflow-hidden bg-neutral-900">
-                    <img alt ="Movie poster 1" decoding="async" data-nimg ="fill" className="object-cover absolute h-[100%] w-full inset-0 text-transparent" src={GOT} style={{}}/>
+                    <img alt ="Movie poster 1" decoding="async" data-nimg ="fill" className="object-cover absolute h-[100%] w-full inset-0 text-transparent" src={TSsR} style={{}}/>
                     </div>
                     <div className="relative w-full aspect-[2/3] rounded-lg overflow-hidden bg-neutral-900">
-                    <img alt ="Movie poster 1" decoding="async" data-nimg ="fill" className="object-cover absolute h-[100%] w-full inset-0 text-transparent" src={GOT} style={{}}/>
+                    <img alt ="Movie poster 1" decoding="async" data-nimg ="fill" className="object-cover absolute h-[100%] w-full inset-0 text-transparent" src={TWoWS} style={{}}/>
                     </div>
                     
                     
@@ -53,57 +71,57 @@ const Landingmain = () => {
                   </div>
                   <div className="flex flex-col gap-4 transitiom-transform duration-300 -translate-y-12 md:-translate-y-24">
                     <div className="relative w-full aspect-[2/3] rounded-lg overflow-hidden bg-neutral-900">
-                    <img alt ="Movie poster 1" decoding="async" data-nimg ="fill" className="object-cover absolute h-[100%] w-full inset-0 text-transparent" src={GOT} style={{}}/>
+                    <img alt ="Movie poster 1" decoding="async" data-nimg ="fill" className="object-cover absolute h-[100%] w-full inset-0 text-transparent" src={BBS5} style={{}}/>
                     </div>
                     <div className="relative w-full aspect-[2/3] rounded-lg overflow-hidden bg-neutral-900">
-                    <img alt ="Movie poster 1" decoding="async" data-nimg ="fill" className="object-cover absolute h-[100%] w-full inset-0 text-transparent" src={GOT} style={{}}/>
+                    <img alt ="Movie poster 1" decoding="async" data-nimg ="fill" className="object-cover absolute h-[100%] w-full inset-0 text-transparent" src={DPS} style={{}}/>
                     </div>
                     <div className="relative w-full aspect-[2/3] rounded-lg overflow-hidden bg-neutral-900">
-                    <img alt ="Movie poster 1" decoding="async" data-nimg ="fill" className="object-cover absolute h-[100%] w-full inset-0 text-transparent" src={GOT} style={{}}/>
+                    <img alt ="Movie poster 1" decoding="async" data-nimg ="fill" className="object-cover absolute h-[100%] w-full inset-0 text-transparent" src={HP} style={{}}/>
                     </div>
                   </div>
                   <div className="flex flex-col gap-4 transitiom-transform duration-300">
                     <div className="relative w-full aspect-[2/3] rounded-lg overflow-hidden bg-neutral-900">
-                    <img alt ="Movie poster 1" decoding="async" data-nimg ="fill" className="object-cover absolute h-[100%] w-full inset-0 text-transparent" src={GOT} style={{}}/>
+                    <img alt ="Movie poster 1" decoding="async" data-nimg ="fill" className="object-cover absolute h-[100%] w-full inset-0 text-transparent" src={DS6} style={{}}/>
                     </div>
                     <div className="relative w-full aspect-[2/3] rounded-lg overflow-hidden bg-neutral-900">
-                    <img alt ="Movie poster 1" decoding="async" data-nimg ="fill" className="object-cover absolute h-[100%] w-full inset-0 text-transparent" src={GOT} style={{}}/>
+                    <img alt ="Movie poster 1" decoding="async" data-nimg ="fill" className="object-cover absolute h-[100%] w-full inset-0 text-transparent" src={TGF} style={{}}/>
                     </div>
                     <div className="relative w-full aspect-[2/3] rounded-lg overflow-hidden bg-neutral-900">
-                    <img alt ="Movie poster 1" decoding="async" data-nimg ="fill" className="object-cover absolute h-[100%] w-full inset-0 text-transparent" src={GOT} style={{}}/>
+                    <img alt ="Movie poster 1" decoding="async" data-nimg ="fill" className="object-cover absolute h-[100%] w-full inset-0 text-transparent" src={Accepted} style={{}}/>
                     </div>
                   </div>
                   <div className="flex flex-col gap-4 transitiom-transform duration-300 -translate-y-12 md:-translate-y-24">
                     <div className="relative w-full aspect-[2/3] rounded-lg overflow-hidden bg-neutral-900">
-                    <img alt ="Movie poster 1" decoding="async" data-nimg ="fill" className="object-cover absolute h-[100%] w-full inset-0 text-transparent" src={GOT} style={{}}/>
+                    <img alt ="Movie poster 1" decoding="async" data-nimg ="fill" className="object-cover absolute h-[100%] w-full inset-0 text-transparent" src={AKOSK} style={{}}/>
                     </div>
                     <div className="relative w-full aspect-[2/3] rounded-lg overflow-hidden bg-neutral-900">
-                    <img alt ="Movie poster 1" decoding="async" data-nimg ="fill" className="object-cover absolute h-[100%] w-full inset-0 text-transparent" src={GOT} style={{}}/>
+                    <img alt ="Movie poster 1" decoding="async" data-nimg ="fill" className="object-cover absolute h-[100%] w-full inset-0 text-transparent" src={TMW} style={{}}/>
                     </div>
                     <div className="relative w-full aspect-[2/3] rounded-lg overflow-hidden bg-neutral-900">
-                    <img alt ="Movie poster 1" decoding="async" data-nimg ="fill" className="object-cover absolute h-[100%] w-full inset-0 text-transparent" src={GOT} style={{}}/>
+                    <img alt ="Movie poster 1" decoding="async" data-nimg ="fill" className="object-cover absolute h-[100%] w-full inset-0 text-transparent" src={TDN} style={{}}/>
                     </div>
                   </div>
                   <div className="flex flex-col gap-4 transitiom-transform duration-300">
                     <div className="relative w-full aspect-[2/3] rounded-lg overflow-hidden bg-neutral-900">
-                    <img alt ="Movie poster 1" decoding="async" data-nimg ="fill" className="object-cover absolute h-[100%] w-full inset-0 text-transparent" src={GOT} style={{}}/>
+                    <img alt ="Movie poster 1" decoding="async" data-nimg ="fill" className="object-cover absolute h-[100%] w-full inset-0 text-transparent" src={Panchayat} style={{}}/>
                     </div>
                     <div className="relative w-full aspect-[2/3] rounded-lg overflow-hidden bg-neutral-900">
-                    <img alt ="Movie poster 1" decoding="async" data-nimg ="fill" className="object-cover absolute h-[100%] w-full inset-0 text-transparent" src={GOT} style={{}}/>
+                    <img alt ="Movie poster 1" decoding="async" data-nimg ="fill" className="object-cover absolute h-[100%] w-full inset-0 text-transparent" src={DBZ} style={{}}/>
                     </div>
                     <div className="relative w-full aspect-[2/3] rounded-lg overflow-hidden bg-neutral-900">
-                    <img alt ="Movie poster 1" decoding="async" data-nimg ="fill" className="object-cover absolute h-[100%] w-full inset-0 text-transparent" src={GOT} style={{}}/>
+                    <img alt ="Movie poster 1" decoding="async" data-nimg ="fill" className="object-cover absolute h-[100%] w-full inset-0 text-transparent" src={suits} style={{}}/>
                     </div>
                   </div>
                   <div className="flex flex-col gap-4 transitiom-transform duration-300 -translate-y-12 md:-translate-y-24 hidden lg:flex">
                     <div className="relative w-full aspect-[2/3] rounded-lg overflow-hidden bg-neutral-900">
-                    <img alt ="Movie poster 1" decoding="async" data-nimg ="fill" className="object-cover absolute h-[100%] w-full inset-0 text-transparent" src={GOT} style={{}}/>
+                    <img alt ="Movie poster 1" decoding="async" data-nimg ="fill" className="object-cover absolute h-[100%] w-full inset-0 text-transparent" src={Naruto} style={{}}/>
                     </div>
                     <div className="relative w-full aspect-[2/3] rounded-lg overflow-hidden bg-neutral-900">
-                    <img alt ="Movie poster 1" decoding="async" data-nimg ="fill" className="object-cover absolute h-[100%] w-full inset-0 text-transparent" src={GOT} style={{}}/>
+                    <img alt ="Movie poster 1" decoding="async" data-nimg ="fill" className="object-cover absolute h-[100%] w-full inset-0 text-transparent" src={Avengers} style={{}}/>
                     </div>
                     <div className="relative w-full aspect-[2/3] rounded-lg overflow-hidden bg-neutral-900">
-                    <img alt ="Movie poster 1" decoding="async" data-nimg ="fill" className="object-cover absolute h-[100%] w-full inset-0 text-transparent" src={GOT} style={{}}/>
+                    <img alt ="Movie poster 1" decoding="async" data-nimg ="fill" className="object-cover absolute h-[100%] w-full inset-0 text-transparent" src={SL} style={{}}/>
                     </div>
                   </div>
 

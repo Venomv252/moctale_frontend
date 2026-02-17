@@ -32,7 +32,7 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="flex items-center">
-            <Link to= "/ogin">
+            <Link to= "/login">
               <button
                 className="inline-flex items-center px-4 py-2 
             bg-[#740DF6] hover:bg-[#5A0BC2] 

@@ -25,13 +25,15 @@ const Landingmain = () => {
   return (
     <>
       <div className="relative w-full bg-[#080808]">
-        <div className="relative  w-full bg-[#080808]  z-0">
+        <div className="relative  w-full bg-[#080808] ">
+          <div className="absolute inset-0 blur-sm">
           <BubbleBackground />
+          </div>
           <div
             className="fixed inset-0 z-1 pointer-events-none flex flex-col items-center mt-[200px]"
             style={{ opacity: "1" }}
           >
-            <div className="w-[250px] h-[50px] md:w-[300px] md:h-[60px] lg:w-[400px] lg:h-[80px] relative">
+            <div className="w-[250px] h-[50px] md:w-[300px] md:h-[60px] lg:w-[400px] lg:h-[80px] relative z-30">
               <img
                 alt="Moctale Logo"
                 decoding="async"

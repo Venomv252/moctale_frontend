@@ -1,14 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
+import LoginMain from "./componenets/LoginMain.jsx";
 
 const Login = () => {
+    
 
-    return (
-        <h1>
-            Login page
-        </h1>
+    return(
+        <LoginMain />
     )
 
-
 }
-
 export default Login;

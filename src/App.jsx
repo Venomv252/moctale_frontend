@@ -4,8 +4,6 @@ import Landing from "./pages/Landing/Landing.jsx";
 import Login from "./pages/Login/Login.jsx";
 import NProgress from "nprogress";
 import "nprogress/nprogress.css";
-import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
 import Layout from "./Layout.jsx";
 
 function App() {

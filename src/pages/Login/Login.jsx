@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import LoginMain from "./componenets/LoginMain.jsx";
+import Auth from "./componenets/Auth.jsx";
 
 const Login = () => {
     
 
     return(
-        <LoginMain />
+        <Auth />
     )
 
 }

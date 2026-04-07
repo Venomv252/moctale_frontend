@@ -9,6 +9,8 @@ const LoginSign = ({ isAuthForm, setisAuthForm }) => {
   const btnclass2 = () =>
     "flex-1 py-2 text-sm font-medium rounded-md transition-all text-gray-500 hover:text-dark";
 
+
+
   return (
     <div className="w-full max-w-[424px] px-4 sm:px-6 flex flex-col items-center">
       <div className="w-full relative mb-5">
@@ -39,7 +41,7 @@ const LoginSign = ({ isAuthForm, setisAuthForm }) => {
                 className={isAuthForm === "Phone" ? btnclass1() : btnclass2()}
                 onClick={() => setisAuthForm("Phone")}
               >
-                {" "}
+                
                 Phone
               </button>
             </div>

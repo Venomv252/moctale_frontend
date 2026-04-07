@@ -2,8 +2,13 @@ import React, { useState } from "react";
 import { PasswordShow, HidePassword } from "./LoginForm.jsx";
 import India from "../../../assets/india.svg";
 import { analyzePassword } from "../../../utilis/PasswordStrength.jsx";
+import useCheckUsername from "./Signup_helping_function/CheckUsername.js";
+import useCheckPhone from "./Signup_helping_function/checkPhone.js";
+import handleSubmit from "./Signup_helping_function/HandleSubmit.jsx";
+import GetOtp from "./Signup_helping_function/GetOtp.js";
+import toast from "react-hot-toast";
 
-const Signup = ({ isAuthForm, setisAuthForm }) => {
+const Signup = ({ isAuthForm, setisAuthForm, SetServerOtp }) => {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -16,15 +21,43 @@ const Signup = ({ isAuthForm, setisAuthForm }) => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-
     setFormData((prev) => ({
       ...prev,
       [name]: value,
     }));
   };
 
+  const isDisabled =
+    !formData.firstName ||
+    !formData.lastName ||
+    !formData.username ||
+    !formData.password ||
+    !formData.phone ||
+    isAvailable === false ||
+    available === false;
+
+  const isAvailable = useCheckUsername(formData.username);
+  const available = useCheckPhone(formData.phone);
+
+  //password score
   const { score, label } = analyzePassword(formData.password);
   const level = Math.ceil(score / 20); // 0 to 5
+
+  const Submit = async (e) => {
+    e.preventDefault();
+    try {
+      const otp = await GetOtp(formData.phone);
+
+      SetServerOtp(otp);
+
+      toast.success(`OTP : ${otp}`);
+
+      setisAuthForm("OTP");
+    } catch (err) {
+      toast.error("Failed to send OTP");
+    }
+    handleSubmit({ isAuthForm, formData });
+  };
 
   return (
     <div className="w-full max-w-[424px] px-4 sm:px-6 flex flex-col items-center">
@@ -38,7 +71,7 @@ const Signup = ({ isAuthForm, setisAuthForm }) => {
               Sign Up
             </h1>
 
-            <form className="space-y-2.5 sm:space-y-3">
+            <form onSubmit={Submit} className="space-y-2.5 sm:space-y-3">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3">
                 {/* //firstName */}
                 <div>
@@ -58,7 +91,7 @@ const Signup = ({ isAuthForm, setisAuthForm }) => {
                       <svg
                         stroke="currentColor"
                         fill="currentColor"
-                        stroke-width="0"
+                        strokeWidth="0"
                         viewBox="0 0 352 512"
                         className="text-red-600"
                         height="1em"
@@ -84,14 +117,14 @@ const Signup = ({ isAuthForm, setisAuthForm }) => {
                     name="lastName"
                     value={formData.lastName}
                     onChange={handleChange}
-                    className="w-full h-8 sm:h-9 px-2 sm:px-3 rounded-md border bg-white border-gray-300 text-black focus:outline-none focus:ring-1 focus:ring-back/20 text-sm"
+                    className="w-full h-8 sm:h-9 px-2 sm:px-3 rounded-md border bg-white border-gray-300 text-black focus:outline-none focus:ring-1 focus:ring-black/20 text-sm"
                   />
                   <div className="mt-1.5 space-y-1 transition-all duration-300 ease-in-out overflow-hidden max-h-0 opacity-0">
                     <div className="flex items-center gap-1 text-xs transform transition-transform duration-300 ease-in-out">
                       <svg
                         stroke="currentColor"
                         fill="currentColor"
-                        stroke-width="0"
+                        strokeWidth="0"
                         viewBox="0 0 352 512"
                         className="text-red-600"
                         height="1em"
@@ -127,11 +160,33 @@ const Signup = ({ isAuthForm, setisAuthForm }) => {
                   value={formData.username}
                   onChange={handleChange}
                   name="username"
-                  maxlength="25"
+                  maxLength={25}
                   spellCheck="false"
                   placeholder="Choose a username"
                 />
               </div>
+
+              <div>
+                {formData.username && (
+                  <p
+                    className={`text-sm
+                   ${
+                     isAvailable === null
+                       ? "text-gray-400"
+                       : isAvailable
+                         ? "text-green-600"
+                         : "text-red-700"
+                   }`}
+                  >
+                    {isAvailable === null
+                      ? "Checking..."
+                      : isAvailable
+                        ? "Username available"
+                        : "Username already taken"}
+                  </p>
+                )}
+              </div>
+
               <div>
                 <div>
                   <div className="flex items-center justify-between mb-0.5">
@@ -226,24 +281,46 @@ const Signup = ({ isAuthForm, setisAuthForm }) => {
                     bg-white border-gray-300
                     text-black focus:outline-none
                     focus:ring-1 focus:ring-black/20 text-sm"
-                    type="number"
+                    type="tel"
+                    inputMode="numeric"
                     value={formData.phone}
                     onChange={handleChange}
                     name="phone"
                     placeholder="Enter phone number "
                   />
                 </div>
+
+                <div>
+                  {formData.phone && (
+                    <p
+                      className={`text-sm ${
+                        available === null
+                          ? "text-gray-400"
+                          : available === "Invalid"
+                            ? "text-red-700"
+                            : available
+                              ? "text-green-600"
+                              : "text-red-700"
+                      }`}
+                    >
+                      {available === null
+                        ? "Checking..."
+                        : available === "Invalid"
+                          ? "Invalid phone number"
+                          : available === true
+                            ? "Phone available"
+                            : "Phone already registered"}
+                    </p>
+                  )}
+                </div>
               </div>
               <div>
                 <button
                   type="submit"
+                  disabled={isDisabled}
                   className={`w-full h-[40px] rounded-full font-medium text-sm flex items-center justify-center gap-2 transition-all duration-300
                   ${
-                    !formData.firstName ||
-                    !formData.password ||
-                    !formData.phone ||
-                    !formData.lastName ||
-                    !formData.username
+                    isDisabled
                       ? "bg-gray-400 text-gray-200 cursor-not-allowed opacity-70 hover:opacity-70"
                       : " bg-gradient-to-r from-[#B048FF] to-[#8F44F0] text-white"
                   } `}

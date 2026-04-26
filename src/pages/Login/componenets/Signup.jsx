@@ -26,6 +26,8 @@ const Signup = ({ isAuthForm, setisAuthForm, SetServerOtp }) => {
       [name]: value,
     }));
   };
+  const isAvailable = useCheckUsername(formData.username);
+  const available = useCheckPhone(formData.phone);
 
   const isDisabled =
     !formData.firstName ||
@@ -35,9 +37,6 @@ const Signup = ({ isAuthForm, setisAuthForm, SetServerOtp }) => {
     !formData.phone ||
     isAvailable === false ||
     available === false;
-
-  const isAvailable = useCheckUsername(formData.username);
-  const available = useCheckPhone(formData.phone);
 
   //password score
   const { score, label } = analyzePassword(formData.password);

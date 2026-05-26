@@ -1,13 +1,19 @@
-import React from "react";
+import { React, useState } from "react";
 import { Outlet } from "react-router-dom";
 import Navbar from "./componenets/Navbar.jsx";
+import Sidebar from "./componenets/Sidebar.jsx";
 
 const Admin = () => {
+  const [IsOpen, setIsOpen] = useState(true);
   return (
     <div className="min-h-screen bg-[#050505] text-white">
-      <Navbar />
-      <main className="mx-auto flex min-h-screen w-full max-w-[1600px] px-4 pb-10 pt-28 sm:px-6 lg:px-8 xl:px-16 2xl:px-32">
-        <Outlet />
+      <Navbar IsOpen={IsOpen} setIsOpen={setIsOpen} />
+      <Sidebar IsOpen={IsOpen}  />
+      <main
+        className={`flex-1 transition-all duration-300
+        ${IsOpen ? "ml-[250px]" : "ml-[80px]"}`}
+      >
+        <Outlet context={{ IsOpen, setIsOpen }} />
       </main>
     </div>
   );

@@ -5,6 +5,7 @@ import { analyzePassword } from "../../../utilis/PasswordStrength.jsx";
 import useCheckUsername from "./Signup_helping_function/CheckUsername.js";
 import useCheckPhone from "./Signup_helping_function/checkPhone.js";
 import handleSubmit from "./Signup_helping_function/HandleSubmit.jsx";
+import getCleanedFormData from "./Signup_helping_function/cleanformdata.jsx"
 import GetOtp from "./Signup_helping_function/GetOtp.js";
 import toast from "react-hot-toast";
 
@@ -42,21 +43,26 @@ const Signup = ({ isAuthForm, setisAuthForm, SetServerOtp }) => {
   const { score, label } = analyzePassword(formData.password);
   const level = Math.ceil(score / 20); // 0 to 5
 
-  const Submit = async (e) => {
-    e.preventDefault();
-    try {
-      const otp = await GetOtp(formData.phone);
+const Submit = async (e) => {
+  e.preventDefault();
 
-      SetServerOtp(otp);
+  try {
+    const otp = await GetOtp(formData.phone.replace(/^0/, ""));
 
-      toast.success(`OTP : ${otp}`);
+    SetServerOtp(otp);
 
-      setisAuthForm("OTP");
-    } catch (err) {
-      toast.error("Failed to send OTP");
-    }
-    handleSubmit({ isAuthForm, formData });
-  };
+    toast.success(`OTP : ${otp}`);
+
+    const cleanedForm = getCleanedFormData(formData);
+
+
+    await handleSubmit({ formData : cleanedForm});
+
+    setisAuthForm("OTP");
+  } catch (e) {
+    toast.error("Failed to send OTP");
+  }
+};
 
   return (
     <div className="w-full max-w-[424px] px-4 sm:px-6 flex flex-col items-center">
@@ -155,12 +161,12 @@ const Signup = ({ isAuthForm, setisAuthForm, SetServerOtp }) => {
                   focus:ring-1 focus:ring-black/20 text-sm"
                   type="text"
                   autoCapitalize="none"
-                  autoCorrect="username"
+                  autoCorrect="off"
                   value={formData.username}
                   onChange={handleChange}
                   name="username"
                   maxLength={25}
-                  spellCheck="false"
+                  spellCheck={false}
                   placeholder="Choose a username"
                 />
               </div>

@@ -1,8 +1,14 @@
-import react from "react";
 import "../../../App.css";
+
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const token = localStorage.getItem("token");
+
+  const adminToken = localStorage.getItem("adminToken");
+
+  const redirectingRoutes = adminToken ? "/admin" : token ? "/home" : "/";
+
   return (
     <>
       <nav
@@ -11,7 +17,7 @@ const Navbar = () => {
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-16 2xl:px-32 h-full flex justify-between items-center">
           <div className="flex items-center h-full">
-            <Link to="/" className="flex items-center h-full">
+            <Link to={redirectingRoutes} className="flex items-center h-full">
               <div className="w-[105px] h-[35px] sm:w-[120px] sm:h-[40px] flex-shrink-0 flex-grow-0">
                 <img
                   alt="Moctale Logo"
@@ -31,14 +37,20 @@ const Navbar = () => {
               </div>
             </Link>
           </div>
+
           <div className="flex items-center">
-            <Link to= "/login">
+            <Link to="/login">
               <button
-                className="inline-flex items-center px-4 py-2 
-            bg-[#740DF6] hover:bg-[#5A0BC2] 
-            font-medium text-sm text-white rounded-lg
-            transition-colors duration-200 
-            focus:outline-none focus:ring-2 focus:ring-[#740DF6] focus:ring-offset-2 focus:ring-offset-black"
+                className="
+                  inline-flex items-center px-4 py-2
+                  bg-[#740DF6] hover:bg-[#5A0BC2]
+                  font-medium text-sm text-white rounded-lg
+                  transition-colors duration-200
+                  focus:outline-none focus:ring-2
+                  focus:ring-[#740DF6]
+                  focus:ring-offset-2
+                  focus:ring-offset-black
+                "
               >
                 Login
               </button>

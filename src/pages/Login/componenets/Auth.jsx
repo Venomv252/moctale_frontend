@@ -6,7 +6,7 @@ import OTPsignup from "./OTPsignup.jsx";
 import OTPforgot from "./OTPforgot.jsx";
 import { motion, AnimatePresence } from "framer-motion";
 
-const Auth = () => {
+const Auth = ({isAdminLogin}) => {
   const [isAuthForm, setisAuthForm] = useState("Username");
   const [serverOtp, SetServerOtp] = useState(null);
 
@@ -39,6 +39,7 @@ const Auth = () => {
               />
             ) : isAuthForm === "Username" || isAuthForm === "Phone" ? (
               <LoginSign
+                isAdminLogin={isAdminLogin}
                 isAuthForm={isAuthForm}
                 setisAuthForm={setisAuthForm}
               />

@@ -8,12 +8,14 @@ const useCheckPhone = (phone) => {
         setAvailable(null);
         return;
       }
-      if (phone.length !== 10) {
+      
+      
+      if (phone.length < 10) {
         setAvailable(null);
         return;
       }
 
-      const res = await fetch(`http://localhost:8080/checkPhone/${phone}`);
+      const res = await fetch(`http://localhost:8080/api/utils/checkPhone/${phone}`);
       const data = await res.json();
 
       setAvailable(data.available);

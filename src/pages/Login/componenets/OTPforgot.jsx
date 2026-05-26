@@ -44,7 +44,7 @@ const OTPforgot = () => {
     }
   };
   useEffect(() => {
-    generateOtpOnce();
+    generateOtpOnce()
   }, []);
 
   // const isDisabled =

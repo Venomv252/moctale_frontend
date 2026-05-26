@@ -1,11 +1,25 @@
 @import "tailwindcss";
 
-
 #nprogress .bar {
   background: #740df6 !important;
   height: 3px !important;
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
+}
+
+/* Chrome, Safari, Opera */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Firefox */
+.scrollbar-hide {
+  scrollbar-width: none;
+}
+
+/* IE and Edge */
+.scrollbar-hide {
+  -ms-overflow-style: none;
 }

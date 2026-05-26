@@ -1,11 +1,20 @@
-import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  Navigate,
+  RouterProvider,
+} from "react-router-dom";
+
 import Landing from "./pages/Landing/Landing.jsx";
 import Login from "./pages/Login/Login.jsx";
 import Layout from "./Layout.jsx";
+
 import { Toaster } from "react-hot-toast";
+
 import Admin from "./pages/Admin/Admin.jsx";
 import AdminUsers from "./pages/Admin/AdminUsers.jsx";
-import AdminContent from "./pages/Admin/AdminContent.jsx";
+import AdminContent from "./pages/Admin/admin Content page/AdminContent.jsx";
+
+import AdminProtectedRoute from "./routes/AdminProtectedRoute.jsx";
 
 function App() {
   const router = createBrowserRouter([
@@ -14,31 +23,44 @@ function App() {
       element: <Layout />,
       children: [
         {
-          path: "/",
+          index: true,
           element: <Landing />,
         },
+
         {
-          path: "/login",
+          path: "login",
           element: <Login />,
         },
+
         {
-          path: "/admin",
-          element: <Admin />,
+          path: "admin/login",
+          element: <Login />,
+        },
+
+        // protected admin routes
+        {
+          element: <AdminProtectedRoute />,
           children: [
             {
-              index: true,
-              element: <Navigate to="users" replace />,
-            },
-            {
-              path: "users",
-              element: <AdminUsers />,
-            },
-            {
-              path: "content",
-              element: <AdminContent />,
+              path: "admin",
+              element: <Admin />,
+              children: [
+                {
+                  index: true,
+                  element: <Navigate to="users" replace />,
+                },
+                {
+                  path: "users",
+                  element: <AdminUsers />,
+                },
+                {
+                  path: "content",
+                  element: <AdminContent />,
+                },
+              ],
             },
           ],
-        }
+        },
       ],
     },
   ]);

@@ -1,7 +1,9 @@
 import { React, useState } from "react";
 import { Outlet } from "react-router-dom";
-import Navbar from "./componenets/Navbar.jsx";
-import Sidebar from "./componenets/Sidebar.jsx";
+
+import Navbar from "./components/Navbar.jsx"
+
+import Sidebar from "./components/Sidebar.jsx";
 
 const Admin = () => {
   const [IsOpen, setIsOpen] = useState(true);
@@ -13,7 +15,7 @@ const Admin = () => {
         className={`flex-1 transition-all duration-300
         ${IsOpen ? "ml-[250px]" : "ml-[80px]"}`}
       >
-        <Outlet context={{ IsOpen, setIsOpen }} />
+        <Outlet  context={{ IsOpen, setIsOpen }} />
       </main>
     </div>
   );

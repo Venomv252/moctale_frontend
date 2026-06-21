@@ -11,7 +11,7 @@ const Sidebar = ({ IsOpen }) => {
 
   return (
     <aside
-      className={`fixed left-0 top-[72px] h-[calc(100vh-72px)]  z-50 h-screen border-r border-white/10
+      className={`fixed left-0 top-[72px] h-[calc(100vh-72px)]  z-50 border-r border-white/10
       bg-[#050505] transition-all duration-300
       ${IsOpen ? "w-[260px]" : "w-[90px]"}`}
     >

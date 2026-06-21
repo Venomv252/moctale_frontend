@@ -4,11 +4,12 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
-import Landing from "./pages/Landing/Landing.jsx";
-import Login from "./pages/Login/Login.jsx";
+import { Toaster } from "react-hot-toast";
+
 import Layout from "./Layout.jsx";
 
-import { Toaster } from "react-hot-toast";
+import Landing from "./pages/Landing/Landing.jsx";
+import Login from "./pages/Login/Login.jsx";
 
 import Admin from "./pages/Admin/Admin.jsx";
 import AdminUsers from "./pages/Admin/AdminUsers.jsx";
@@ -37,7 +38,7 @@ function App() {
           element: <Login />,
         },
 
-        // protected admin routes
+        // Protected Admin Routes
         {
           element: <AdminProtectedRoute />,
           children: [
@@ -49,10 +50,12 @@ function App() {
                   index: true,
                   element: <Navigate to="users" replace />,
                 },
+
                 {
                   path: "users",
                   element: <AdminUsers />,
                 },
+
                 {
                   path: "content",
                   element: <AdminContent />,

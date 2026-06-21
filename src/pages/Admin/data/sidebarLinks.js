@@ -22,22 +22,10 @@ export const sidebarLinks = [
 
     items: [
       {
-        name: "Movies",
-        path: "/admin/movies",
+        name: "Content",
+        path: "/admin/content",
         icon: MovieOutlinedIcon,
       },
-
-      {
-        name: "Series",
-        path: "/admin/series",
-        icon: LiveTvOutlinedIcon,
-      },
-      {
-        name: "Anime",
-        path: "/admin/anime",
-        icon: LiveTvOutlinedIcon,
-      },
-
       {
         name: "Reviews",
         path: "/admin/reviews",

@@ -54,7 +54,7 @@ const LoginFormUser = ({ isAdminLogin }) => {
 
   const [showPassword, setShowPassword] = useState(false);
 
-  const [username, setUsername] = useState("");
+  const [phone, setPhone] = useState("");
 
   const [password, setPassword] = useState("");
 
@@ -63,7 +63,7 @@ const LoginFormUser = ({ isAdminLogin }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!username || !password) {
+    if (!phone || !password) {
       return toast.error("Please fill credentials");
     }
 
@@ -75,7 +75,7 @@ const LoginFormUser = ({ isAdminLogin }) => {
         : "http://localhost:8080/api/auth/login";
 
       const response = await axios.post(endpoint, {
-        username,
+        phone,
         password,
       });
 
@@ -110,16 +110,16 @@ const LoginFormUser = ({ isAdminLogin }) => {
       >
         <div className="flexx flex-col-gap1">
           <label className="text-sm font-medium text-dark">
-            Username
+            Phone
           </label>
 
           <input
             type="text"
-            placeholder="Username"
-            autoComplete="username"
-            value={username}
+            placeholder="Phone"
+            autoComplete="phone"
+            value={phone}
             onChange={(e) =>
-              setUsername(e.target.value)
+              setPhone(e.target.value)
             }
             className="w-full h-[40px] px-2 sm:px-3 bg-white rounded-md border border-gray-300 text-dark placeholder:text-placeholder focus:outline-none focus:border-gray-400 focus:ring-1 focus:ring-gray-400"
           />
@@ -165,11 +165,11 @@ const LoginFormUser = ({ isAdminLogin }) => {
         <button
           type="submit"
           disabled={
-            !username || !password || loading
+            !phone || !password || loading
           }
           className={`w-full h-[40px] rounded-full font-medium text-sm flex items-center justify-center gap-2 transition-all duration-300
           ${
-            !username || !password || loading
+            !phone || !password || loading
               ? "bg-gray-400 text-gray-200 cursor-not-allowed opacity-70"
               : "bg-gradient-to-r from-[#B048FF] to-[#8F44F0] text-white"
           }`}

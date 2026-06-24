@@ -16,6 +16,10 @@ API.interceptors.request.use((config) => {
   return config;
 });
 
+// =======================
+// Content APIs
+// =======================
+
 export const getContents = async () => {
   const res = await API.get("/getContents");
   return res.data;
@@ -33,5 +37,10 @@ export const deleteContent = async (id) => {
 
 export const updateContent = async (id, data) => {
   const res = await API.put(`/updateContent/${id}`, data);
+  return res.data;
+};
+
+export const getContentOverview = async () => {
+  const res = await API.get("/contentOverview");
   return res.data;
 };

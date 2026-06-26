@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import MovieOutlinedIcon from "@mui/icons-material/MovieOutlined";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 
-import { dashboardLink, sidebarLinks } from "../data/sidebarLinks.js";
+import { dashboardLink, sidebarLinks } from "../../../constants/sidebarLinks.js";
 
 const Sidebar = ({ IsOpen }) => {
   const DashboardIcon = dashboardLink.icon;

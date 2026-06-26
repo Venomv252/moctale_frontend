@@ -10,12 +10,19 @@ import Layout from "./Layout.jsx";
 
 import Landing from "./pages/Landing/Landing.jsx";
 import Login from "./pages/Login/Login.jsx";
+import Home from "./pages/User/Home.jsx";
 
 import Admin from "./pages/Admin/Admin.jsx";
-import AdminUsers from "./pages/Admin/AdminUsers.jsx";
-import AdminContent from "./pages/Admin/admin Content page/AdminContent.jsx";
+
+import Dashboard from "./pages/Admin/Dashboard.jsx";
+import Users from "./pages/Admin/Users.jsx";
+import Content from "./pages/Admin/Content.jsx";
+import Reviews from "./pages/Admin/Reviews.jsx";
+import Analytics from "./pages/Admin/Analytics.jsx";
+import Bookings from "./pages/Admin/Bookings.jsx";
 
 import AdminProtectedRoute from "./routes/AdminProtectedRoute.jsx";
+import UserProtectedRoute from "./routes/UserProtectedRoute.jsx";
 
 function App() {
   const router = createBrowserRouter([
@@ -38,7 +45,20 @@ function App() {
           element: <Login />,
         },
 
-        // Protected Admin Routes
+        {
+          element: <UserProtectedRoute />,
+          children: [
+            {
+              path: "home",
+              element: <Home />,
+            },
+            // Future user routes can be added here:
+            // { path: "profile", element: <Profile /> },
+            // { path: "bookings", element: <UserBookings /> },
+            // { path: "reviews", element: <UserReviews /> },
+          ],
+        },
+
         {
           element: <AdminProtectedRoute />,
           children: [
@@ -48,17 +68,37 @@ function App() {
               children: [
                 {
                   index: true,
-                  element: <Navigate to="users" replace />,
+                  element: <Navigate to="dashboard" replace />,
+                },
+
+                {
+                  path: "dashboard",
+                  element: <Dashboard />,
                 },
 
                 {
                   path: "users",
-                  element: <AdminUsers />,
+                  element: <Users />,
                 },
 
                 {
                   path: "content",
-                  element: <AdminContent />,
+                  element: <Content />,
+                },
+
+                {
+                  path: "reviews",
+                  element: <Reviews />,
+                },
+
+                {
+                  path: "analytics",
+                  element: <Analytics />,
+                },
+
+                {
+                  path: "bookings",
+                  element: <Bookings />,
                 },
               ],
             },

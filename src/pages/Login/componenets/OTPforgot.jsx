@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { HidePassword, PasswordShow } from "./LoginForm";
-import { analyzePassword } from "../../../utilis/PasswordStrength";
+import { analyzePassword } from "../../../utils/PasswordStrength";
 import toast from "react-hot-toast";
 
 const OTPforgot = () => {

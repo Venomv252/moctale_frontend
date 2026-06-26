@@ -100,7 +100,7 @@ const LoginFormUser = ({ isAdminLogin }) => {
           token
         );
 
-        navigate("/admin");
+        navigate("/admin/dashboard");
 
       } else {
 
@@ -109,7 +109,7 @@ const LoginFormUser = ({ isAdminLogin }) => {
           token
         );
 
-        navigate("/");
+        navigate("/home");
       }
 
       toast.success(

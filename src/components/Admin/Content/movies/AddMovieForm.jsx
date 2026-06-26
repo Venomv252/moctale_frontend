@@ -1,12 +1,10 @@
 import React, { useState } from "react";
+import MovieFormInput from "./MovieFormInput.jsx";
+import movieInitialState from "../../../../constants/movieInitialState.js";
+import CastInput from "../CastInput.jsx";
 
-import ContentFormInput from "./ContentFormInput.jsx";
-import CastInput from "./CastInput.jsx";
-
-import contentInitialState from "../../data/contentInitialState.js";
-
-const AddContentForm = ({ onSubmit }) => {
-  const [formData, setFormData] = useState(contentInitialState);
+const AddMovieForm = ({ onSubmit }) => {
+  const [formData, setFormData] = useState(movieInitialState);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -17,64 +15,28 @@ const AddContentForm = ({ onSubmit }) => {
     }));
   };
 
+  
+
   const stringToArray = (value) =>
     value
       .split(",")
       .map((item) => item.trim())
       .filter(Boolean);
 
-  const addSeason = () => {
-    setFormData((prev) => ({
-      ...prev,
-      seasons: [
-        ...prev.seasons,
-        {
-          seasonNumber: prev.seasons.length + 1,
-          episodeCount: 0,
-        },
-      ],
-    }));
-  };
-
-  const removeSeason = (index) => {
-    setFormData((prev) => ({
-      ...prev,
-      seasons: prev.seasons.filter((_, i) => i !== index),
-    }));
-  };
-
-  const updateSeason = (index, field, value) => {
-    setFormData((prev) => ({
-      ...prev,
-      seasons: prev.seasons.map((season, i) =>
-        i === index
-          ? {
-              ...season,
-              [field]: Number(value),
-            }
-          : season
-      ),
-    }));
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
 
     const payload = {
       ...formData,
-
       genres: stringToArray(formData.genres),
-
       keywords: stringToArray(formData.keywords),
-
       screenshots: stringToArray(formData.screenshots),
-
-      availableLanguages: stringToArray(
-        formData.availableLanguages
-      ),
+      availableLanguages: stringToArray(formData.availableLanguages),
     };
 
     onSubmit(payload);
+
+    // setFormData(movieInitialState);
   };
 
   return (
@@ -82,68 +44,49 @@ const AddContentForm = ({ onSubmit }) => {
       onSubmit={handleSubmit}
       className="grid grid-cols-1 gap-6 rounded-2xl border border-white/10 bg-[#0d0d0d] p-6 lg:grid-cols-2"
     >
-      {/* TYPE */}
-
-      <div className="flex flex-col gap-2">
-        <label className="text-sm text-gray-300">
-          Content Type
-        </label>
-
-        <select
-          name="type"
-          value={formData.type}
-          onChange={handleChange}
-          className="rounded-xl border border-white/10 bg-[#111] px-4 py-3 text-white outline-none"
-        >
-          <option value="movie">Movie</option>
-          <option value="series">Series</option>
-          <option value="anime">Anime</option>
-        </select>
-      </div>
-
-      <ContentFormInput
-        label="Title"
+      <MovieFormInput
+        label="Movie Title"
         name="title"
         value={formData.title}
         onChange={handleChange}
       />
 
-      <ContentFormInput
+      <MovieFormInput
         label="Slug"
         name="slug"
         value={formData.slug}
         onChange={handleChange}
       />
 
-      <ContentFormInput
+      <MovieFormInput
         label="Tagline"
         name="tagline"
         value={formData.tagline}
         onChange={handleChange}
       />
 
-      <ContentFormInput
+      <MovieFormInput
         label="Poster URL"
         name="poster"
         value={formData.poster}
         onChange={handleChange}
       />
 
-      <ContentFormInput
+      <MovieFormInput
         label="Banner URL"
         name="banner"
         value={formData.banner}
         onChange={handleChange}
       />
 
-      <ContentFormInput
+      <MovieFormInput
         label="Trailer URL"
         name="trailerUrl"
         value={formData.trailerUrl}
         onChange={handleChange}
       />
 
-      <ContentFormInput
+      <MovieFormInput
         label="Release Date"
         type="date"
         name="releaseDate"
@@ -151,7 +94,7 @@ const AddContentForm = ({ onSubmit }) => {
         onChange={handleChange}
       />
 
-      <ContentFormInput
+      <MovieFormInput
         label="Duration (Minutes)"
         type="number"
         name="duration"
@@ -159,27 +102,22 @@ const AddContentForm = ({ onSubmit }) => {
         onChange={handleChange}
       />
 
-      <ContentFormInput
+      <MovieFormInput
         label="Primary Language"
         name="primaryLanguage"
         value={formData.primaryLanguage}
         onChange={handleChange}
       />
 
-      <ContentFormInput
+      <MovieFormInput
         label="Country"
         name="country"
         value={formData.country}
         onChange={handleChange}
       />
 
-      {/* STATUS */}
-
       <div className="flex flex-col gap-2">
-        <label className="text-sm text-gray-300">
-          Status
-        </label>
-
+        <label className="text-sm text-gray-300">Status</label>
         <select
           name="status"
           value={formData.status}
@@ -188,17 +126,12 @@ const AddContentForm = ({ onSubmit }) => {
         >
           <option value="released">Released</option>
           <option value="upcoming">Upcoming</option>
-          <option value="cancelled">Cancelled</option>
+          <option value="ongoing">Ongoing</option>
         </select>
       </div>
 
-      {/* AGE RATING */}
-
       <div className="flex flex-col gap-2">
-        <label className="text-sm text-gray-300">
-          Age Rating
-        </label>
-
+        <label className="text-sm text-gray-300">Age Rating</label>
         <select
           name="ageRating"
           value={formData.ageRating}
@@ -213,42 +146,42 @@ const AddContentForm = ({ onSubmit }) => {
         </select>
       </div>
 
-      <ContentFormInput
+      <MovieFormInput
         label="Genres (comma separated)"
         name="genres"
         value={formData.genres}
         onChange={handleChange}
       />
 
-      <ContentFormInput
+      <MovieFormInput
         label="Keywords (comma separated)"
         name="keywords"
         value={formData.keywords}
         onChange={handleChange}
       />
 
-      <ContentFormInput
+      <MovieFormInput
         label="Screenshots (comma separated URLs)"
         name="screenshots"
         value={formData.screenshots}
         onChange={handleChange}
       />
 
-      <ContentFormInput
-        label="Available Languages"
+      <MovieFormInput
+        label="Available Languages (comma separated)"
         name="availableLanguages"
         value={formData.availableLanguages}
         onChange={handleChange}
       />
 
-      <ContentFormInput
+      <MovieFormInput
         label="Latest Update"
         name="latestUpdate"
         value={formData.latestUpdate}
         onChange={handleChange}
       />
 
-      <ContentFormInput
+      <MovieFormInput
         label="What's New"
         name="whatsNew"
         value={formData.whatsNew}
@@ -256,9 +189,7 @@ const AddContentForm = ({ onSubmit }) => {
       />
 
       <div className="lg:col-span-2 flex flex-col gap-2">
-        <label className="text-sm text-gray-300">
-          Description
-        </label>
+        <label className="text-sm text-gray-300">Description</label>
 
         <textarea
           rows={5}
@@ -269,77 +200,7 @@ const AddContentForm = ({ onSubmit }) => {
         />
       </div>
 
-      <CastInput
-        cast={formData.cast}
-        setFormData={setFormData}
-      />
-
-      {/* SEASONS */}
-
-      {formData.type !== "movie" && (
-        <div className="lg:col-span-2">
-          <div className="mb-4 flex items-center justify-between">
-            <h3 className="text-xl font-semibold">
-              Seasons
-            </h3>
-
-            <button
-              type="button"
-              onClick={addSeason}
-              className="rounded-lg bg-violet-600 px-4 py-2"
-            >
-              Add Season
-            </button>
-          </div>
-
-          <div className="space-y-4">
-            {formData.seasons.map((season, index) => (
-              <div
-                key={index}
-                className="grid grid-cols-3 gap-4 rounded-xl border border-white/10 p-4"
-              >
-                <input
-                  type="number"
-                  placeholder="Season Number"
-                  value={season.seasonNumber}
-                  onChange={(e) =>
-                    updateSeason(
-                      index,
-                      "seasonNumber",
-                      e.target.value
-                    )
-                  }
-                  className="rounded-lg bg-[#111] p-3"
-                />
-
-                <input
-                  type="number"
-                  placeholder="Episode Count"
-                  value={season.episodeCount}
-                  onChange={(e) =>
-                    updateSeason(
-                      index,
-                      "episodeCount",
-                      e.target.value
-                    )
-                  }
-                  className="rounded-lg bg-[#111] p-3"
-                />
-
-                <button
-                  type="button"
-                  onClick={() => removeSeason(index)}
-                  className="rounded-lg bg-red-600"
-                >
-                  Remove
-                </button>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
-
-      {/* FLAGS */}
+      <CastInput cast={formData.cast} setFormData={setFormData} />
 
       <div className="flex items-center gap-3">
         <input
@@ -383,11 +244,12 @@ const AddContentForm = ({ onSubmit }) => {
 
       <button
         type="submit"
-        className="lg:col-span-2 rounded-xl bg-violet-600 px-6 py-4 font-semibold transition hover:bg-violet-700"
+        className="lg:col-span-2 rounded-xl bg-violet-600 px-6 py-4 font-semibold hover:bg-violet-700 transition"
       >
-        Add Content
+        Add Movie
       </button>
     </form>
   );
 };
-export default AddContentForm;
+
+export default AddMovieForm;

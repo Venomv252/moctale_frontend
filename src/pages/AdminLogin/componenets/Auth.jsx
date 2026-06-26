@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import Forgotten from "./Forgotten.jsx";
-import LoginSign from "./LoginSign.jsx";
-import Signup from "./Signup.jsx";
-import OTPsignup from "./OTPsignup.jsx";
-import OTPforgot from "./OTPforgot.jsx";
+import Forgotten from "./Forgotten.js";
+import LoginSign from "./LoginSign.js";
+import Signup from "./Signup.js";
+import OTPsignup from "./OTPsignup.js";
+import OTPforgot from "./OTPforgot.js";
 import { motion, AnimatePresence } from "framer-motion";
 // import OTPsignup from "./OTPsignup.jsx";
 

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { PasswordShow, HidePassword } from "./LoginForm.jsx";
 import India from "../../../assets/india.svg";
-import { analyzePassword } from "../../../utilis/PasswordStrength.jsx";
+import { analyzePassword } from "../../../utils/PasswordStrength.jsx";
 import useCheckUsername from "./Signup_helping_function/CheckUsername.js";
 import useCheckPhone from "./Signup_helping_function/checkPhone.js";
 import handleSubmit from "./Signup_helping_function/HandleSubmit.jsx";

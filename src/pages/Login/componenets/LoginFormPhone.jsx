@@ -84,11 +84,11 @@ const LoginFormUser = ({ isAdminLogin }) => {
       if (isAdminLogin) {
         localStorage.setItem("adminToken", token);
 
-        navigate("/admin");
+        navigate("/admin/dashboard");
       } else {
         localStorage.setItem("token", token);
 
-        navigate("/");
+        navigate("/home");
       }
 
       toast.success(response.data.message);

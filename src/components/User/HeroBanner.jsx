@@ -2,7 +2,7 @@ import React from "react";
 
 const HeroBanner = ({ content }) => {
   return (
-    <div className="relative h-[70vh] min-h-[500px] w-full overflow-hidden">
+    <div className="relative -translate-y-6 h-[70vh] top-1  min-h-[500px] w-full overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
@@ -20,13 +20,11 @@ const HeroBanner = ({ content }) => {
       </div>
 
       {/* Content */}
-      <div className="relative flex h-full items-center">
-        <div className="container mx-auto px-4 md:px-6 lg:px-8">
+      <div className="relative  flex h-full items-center">
+        <div className="container  mx-auto px-4 md:px-6 lg:px-8">
           <div className="max-w-2xl">
             {/* Type Badge */}
-            <div className="mb-4 inline-block rounded-lg bg-violet-600 px-4 py-1.5 text-sm font-bold uppercase text-white">
-              {content.type}
-            </div>
+            
 
             {/* Title */}
             <h1 className="mb-4 text-4xl font-bold text-white md:text-5xl lg:text-6xl">

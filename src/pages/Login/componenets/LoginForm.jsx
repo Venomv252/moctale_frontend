@@ -109,7 +109,7 @@ const LoginFormUser = ({ isAdminLogin }) => {
           token
         );
 
-        navigate("/home");
+        navigate("/explore");
       }
 
       toast.success(

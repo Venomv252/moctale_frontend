@@ -1,5 +1,14 @@
 import React from "react";
 import BubbleBackground from "./Bubblebackground";
+//series poster 
+import Got from "../../../assets/Series-Posters/Got.jpg"
+
+// movie poster
+import shawshank from "../../../assets/Movies Posters/shawshank_redemption.jpg"
+import TWoWS from "../../../assets/Movies Posters/TWoWS.jpg"
+
+// anime poster
+
 
 const Landingmain = () => {
   return (
@@ -55,7 +64,7 @@ const Landingmain = () => {
                           loading="lazy"
                           data-nimg="fill"
                           className="object-cover absolute h-[100%] w-full inset-0 text-transparent"
-                          src="/assets/Series-Posters/Got.jpg"
+                          src={Got}
                           style={{}}
                         />
                       </div>
@@ -66,7 +75,7 @@ const Landingmain = () => {
                           loading="lazy"
                           data-nimg="fill"
                           className="object-cover absolute h-[100%] w-full inset-0 text-transparent"
-                          src="/assets/Movies-Posters/shawshank_redemption.jpg"
+                          src={shawshank}
                           style={{}}
                         />
                       </div>
@@ -77,7 +86,7 @@ const Landingmain = () => {
                           loading="lazy"
                           data-nimg="fill"
                           className="object-cover absolute h-[100%] w-full inset-0 text-transparent"
-                          src="/assets/Movies-Posters/TWoWS.jpg"
+                          src={TWoWS}
                           style={{}}
                         />
                       </div>

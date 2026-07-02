@@ -7,7 +7,7 @@ const handleSubmit = async ({ formData }) => {
   };
 
   const res = await axios.post(
-    "http://localhost:8080/api/auth/signup",
+    "https://moctale-backend.onrender.com/api/auth/signup",
     processData
   );
 

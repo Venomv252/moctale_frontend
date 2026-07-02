@@ -50,81 +50,57 @@ export const HidePassword = () => {
 };
 
 const LoginFormUser = ({ isAdminLogin }) => {
-
   const navigate = useNavigate();
 
-  const [showPassword, setShowPassword] =
-    useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
-  const [username, setUsername] =
-    useState("");
+  const [username, setUsername] = useState("");
 
-  const [password, setPassword] =
-    useState("");
+  const [password, setPassword] = useState("");
 
-  const [loading, setLoading] =
-    useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
-
     e.preventDefault();
 
     if (!username || !password) {
-      return toast.error(
-        "Please fill credentials"
-      );
+      return toast.error("Please fill credentials");
     }
 
     try {
-
       setLoading(true);
 
       const endpoint = isAdminLogin
-        ? "http://localhost:8080/api/admin/login"
-        : "http://localhost:8080/api/auth/login";
+        ? [
+            "http://localhost:8080/api/admin/login",
+            "https://moctale-backend.onrender.com/api/admin/login",
+          ]
+        : [
+            "http://localhost:8080/api/auth/login",
+            "https://moctale-backend.onrender.com/api/auth/login",
+          ];
 
-      const response = await axios.post(
-        endpoint,
-        {
-          username,
-          password,
-        }
-      );
+      const response = await axios.post(endpoint, {
+        username,
+        password,
+      });
 
       const token = response.data.token;
 
       if (isAdminLogin) {
-
-        localStorage.setItem(
-          "adminToken",
-          token
-        );
+        localStorage.setItem("adminToken", token);
 
         navigate("/admin/dashboard");
-
       } else {
-
-        localStorage.setItem(
-          "token",
-          token
-        );
+        localStorage.setItem("token", token);
 
         navigate("/explore");
       }
 
-      toast.success(
-        response.data.message
-      );
-
+      toast.success(response.data.message);
     } catch (error) {
-
-      toast.error(
-        error?.response?.data?.message ||
-        "Login failed"
-      );
-
+      toast.error(error?.response?.data?.message || "Login failed");
     } finally {
-
       setLoading(false);
     }
   };
@@ -135,75 +111,47 @@ const LoginFormUser = ({ isAdminLogin }) => {
         className="flex flex-col gap-2.5 sm:gap-3 w-full"
         onSubmit={handleSubmit}
       >
-
         <div className="flexx flex-col-gap1">
-
-          <label className="text-sm font-medium text-dark">
-            Username
-          </label>
+          <label className="text-sm font-medium text-dark">Username</label>
 
           <input
             type="text"
             placeholder="Username"
             autoComplete="username"
             value={username}
-            onChange={(e) =>
-              setUsername(e.target.value)
-            }
+            onChange={(e) => setUsername(e.target.value)}
             className="w-full h-[40px] px-2 sm:px-3 bg-white rounded-md border border-gray-300 text-dark placeholder:text-placeholder focus:outline-none focus:border-gray-400 focus:ring-1 focus:ring-gray-400"
           />
-
         </div>
 
         <div className="flexx flex-col-gap1">
-
-          <label className="text-sm font-medium text-dark">
-            Password
-          </label>
+          <label className="text-sm font-medium text-dark">Password</label>
 
           <div className="relative">
-
             <input
-              type={
-                showPassword
-                  ? "text"
-                  : "password"
-              }
+              type={showPassword ? "text" : "password"}
               placeholder="Password"
               autoComplete="current-password"
               value={password}
-              onChange={(e) =>
-                setPassword(e.target.value)
-              }
+              onChange={(e) => setPassword(e.target.value)}
               className="w-full h-[40px] px-2 sm:px-3 bg-white rounded-md border border-gray-300 text-dark placeholder:text-placeholder focus:outline-none focus:border-gray-400 focus:ring-1 focus:ring-gray-400"
             />
 
             <button
               type="button"
               className="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5 text-gray-500 hover:text-gray-700"
-              onClick={() =>
-                setShowPassword(
-                  !showPassword
-                )
-              }
+              onClick={() => setShowPassword(!showPassword)}
             >
               <div className="relative w-5 h-5">
-                {showPassword
-                  ? <PasswordShow />
-                  : <HidePassword />}
+                {showPassword ? <PasswordShow /> : <HidePassword />}
               </div>
             </button>
-
           </div>
         </div>
 
         <button
           type="submit"
-          disabled={
-            !username ||
-            !password ||
-            loading
-          }
+          disabled={!username || !password || loading}
           className={`w-full h-[40px] rounded-full font-medium text-sm flex items-center justify-center gap-2 transition-all duration-300
           ${
             !username || !password || loading
@@ -211,11 +159,8 @@ const LoginFormUser = ({ isAdminLogin }) => {
               : "bg-gradient-to-r from-[#B048FF] to-[#8F44F0] text-white"
           }`}
         >
-          {loading
-            ? "Logging in..."
-            : "Login"}
+          {loading ? "Logging in..." : "Login"}
         </button>
-
       </form>
     </>
   );

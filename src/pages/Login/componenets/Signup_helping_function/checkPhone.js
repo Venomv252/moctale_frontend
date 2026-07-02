@@ -15,7 +15,7 @@ const useCheckPhone = (phone) => {
         return;
       }
 
-      const res = await fetch(`http://localhost:8080/api/utils/checkPhone/${phone}`);
+      const res = await fetch(`https://moctale-backend.onrender.com/api/utils/checkPhone/${phone}`);
       const data = await res.json();
 
       setAvailable(data.available);

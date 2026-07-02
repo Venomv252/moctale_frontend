@@ -3,7 +3,7 @@ import React from "react";
 
 const GetOtp = async (phone) => {
   try {
-    const res = await axios.post("http://localhost:8080/api/utils/getOtp", {
+    const res = await axios.post("https://moctale-backend.onrender.com/api/utils/getOtp", {
       phone: phone,
     });
 

@@ -6,7 +6,7 @@ const useCheckUsername = (username) => {
     const timer = setTimeout(async () => {
       if (!username) return;
 
-      const res = await fetch(`http://localhost:8080/api/utils/username/${username}`);
+      const res = await fetch(`https://moctale-backend.onrender.com/api/utils/username/${username}`);
       const data = await res.json();
 
       setAvailable(data.available);

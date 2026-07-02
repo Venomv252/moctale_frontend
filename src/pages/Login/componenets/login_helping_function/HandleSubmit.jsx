@@ -5,7 +5,7 @@ export const submit = async ({ formData }) => {
     timestamp: Date.now(),
   };
 
-  const res = await axios.post("http://localhost:8080/",processData)
+  const res = await axios.post("https://moctale-backend.onrender.com/",processData)
 
   const result = await res.data;
 

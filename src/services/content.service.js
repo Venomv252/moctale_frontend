@@ -1,10 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: [
-    "http://localhost:8080/api/admin",
-    "https://moctale-backend.onrender.com",
-  ],
+  baseURL: "https://moctale-backend.onrender.com/api/admin",
   withCredentials: true,
 });
 

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import India from "../../../assets/india.svg";
 import toast from "react-hot-toast";
 
 const Forgotten = ({ isAuthForm, setisAuthForm }) => {
@@ -46,7 +45,7 @@ const Forgotten = ({ isAuthForm, setisAuthForm }) => {
                       decoding="async"
                       data-nimg="1"
                       className="w-6 h-4 object-contain"
-                      src={India}
+                      src="/assets/india.svg"
                       style={{ color: "transparent" }}
                     />
                     <span className="text-gray-500 text-sm">+91 - </span>

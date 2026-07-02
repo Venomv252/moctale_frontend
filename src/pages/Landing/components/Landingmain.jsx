@@ -1,24 +1,5 @@
 import React from "react";
 import BubbleBackground from "./Bubblebackground";
-import GOT from "../../../assets/Series-Posters/Got.jpg";
-import TSsR from "../../../assets/Movies Posters/shawshank_redemption.jpg";
-import TWoWS from "../../../assets/Movies Posters/TWoWS.jpg";
-import BB from "../../../assets/Movies Posters/BB.jpg";
-import BBS5 from "../../../assets/Series-Posters/BBS5.jpg";
-import AKOSK from "../../../assets/Series-Posters/AKOSK.jpg";
-import DS6 from "../../../assets/Series-Posters/DS6.jpg";
-import Panchayat from "../../../assets/Series-Posters/Panchayat.jpg";
-import DPS from "../../../assets/Movies Posters/DPS.jpg";
-import HP from "../../../assets/Movies Posters/HP.jpg";
-import TMW from "../../../assets/Movies Posters/TMW.jpg";
-import TGF from "../../../assets/Movies Posters/TGF.jpg";
-import Accepted from "../../../assets/Movies Posters/Accepted.jpg";
-import Avengers from "../../../assets/Movies Posters/Avengers-Doomsday.jpg";
-import TDN from "../../../assets/Anime-Poster/TDN.jpg";
-import DBZ from "../../../assets/Anime-Poster/DBZ.jpg";
-import Naruto from "../../../assets/Anime-Poster/Naruto.jpg";
-import SL from "../../../assets/Anime-Poster/SL.jpg";
-import suits from "../../../assets/Series-Posters/Suits.jpg";
 
 const Landingmain = () => {
   return (
@@ -74,7 +55,7 @@ const Landingmain = () => {
                           loading="lazy"
                           data-nimg="fill"
                           className="object-cover absolute h-[100%] w-full inset-0 text-transparent"
-                          src={GOT}
+                          src="/assets/Series-Posters/Got.jpg"
                           style={{}}
                         />
                       </div>
@@ -85,7 +66,7 @@ const Landingmain = () => {
                           loading="lazy"
                           data-nimg="fill"
                           className="object-cover absolute h-[100%] w-full inset-0 text-transparent"
-                          src={TSsR}
+                          src="/assets/Movies-Posters/shawshank_redemption.jpg"
                           style={{}}
                         />
                       </div>
@@ -96,7 +77,7 @@ const Landingmain = () => {
                           loading="lazy"
                           data-nimg="fill"
                           className="object-cover absolute h-[100%] w-full inset-0 text-transparent"
-                          src={TWoWS}
+                          src="/assets/Movies-Posters/TWoWS.jpg"
                           style={{}}
                         />
                       </div>
@@ -109,7 +90,7 @@ const Landingmain = () => {
                           loading="lazy"
                           data-nimg="fill"
                           className="object-cover  h-[100%] w-full inset-0 text-transparent"
-                          src={BBS5}
+                          src="/assets/Series-Posters/BBS5.jpg"
                           style={{}}
                         />
                       </div>
@@ -120,7 +101,7 @@ const Landingmain = () => {
                           loading="lazy"
                           data-nimg="fill"
                           className="object-cover absolute h-[300px] w-full inset-0 text-transparent"
-                          src={DPS}
+                          src="/assets/Movies-Posters/DPS.jpg"
                           style={{}}
                         />
                       </div>
@@ -132,7 +113,7 @@ const Landingmain = () => {
                           fetchpriority="low"
                           data-nimg="fill"
                           className="object-cover absolute h-[100%]   w-full inset-0 text-transparent"
-                          src={HP}
+                          src="/assets/Movies-Posters/HP.jpg"
                           style={{}}
                         />
                       </div>
@@ -145,7 +126,7 @@ const Landingmain = () => {
                           loading="lazy"
                           data-nimg="fill"
                           className="object-cover absolute h-[100%] w-full inset-0 text-transparent"
-                          src={DS6}
+                          src="/assets/Series-Posters/DS6.jpg"
                           style={{}}
                         />
                       </div>
@@ -156,7 +137,7 @@ const Landingmain = () => {
                           loading="lazy"
                           data-nimg="fill"
                           className="object-cover absolute h-[100%] w-full inset-0 text-transparent"
-                          src={TGF}
+                          src="/assets/Movies-Posters/TGF.jpg"
                           style={{}}
                         />
                       </div>
@@ -167,7 +148,7 @@ const Landingmain = () => {
                           loading="lazy"
                           data-nimg="fill"
                           className="object-cover absolute h-[100%] w-full inset-0 text-transparent"
-                          src={Accepted}
+                          src="/assets/Movies-Posters/Accepted.jpg"
                           style={{}}
                         />
                       </div>
@@ -180,7 +161,7 @@ const Landingmain = () => {
                           loading="lazy"
                           data-nimg="fill"
                           className="object-cover absolute h-[100%] w-full inset-0 text-transparent"
-                          src={AKOSK}
+                          src="/assets/Series-Posters/AKOSK.jpg"
                           style={{}}
                         />
                       </div>
@@ -191,7 +172,7 @@ const Landingmain = () => {
                           loading="lazy"
                           data-nimg="fill"
                           className="object-cover absolute h-[100%] w-full inset-0 text-transparent"
-                          src={TMW}
+                          src="/assets/Movies-Posters/TMW.jpg"
                           style={{}}
                         />
                       </div>
@@ -202,7 +183,7 @@ const Landingmain = () => {
                           loading="lazy"
                           data-nimg="fill"
                           className="object-cover absolute h-[100%] w-full inset-0 text-transparent"
-                          src={TDN}
+                          src="/assets/Anime-Posters/TDN.jpg"
                           style={{}}
                         />
                       </div>
@@ -215,7 +196,7 @@ const Landingmain = () => {
                           loading="lazy"
                           data-nimg="fill"
                           className="object-cover absolute h-[100%] w-full inset-0 text-transparent"
-                          src={Panchayat}
+                          src="/assets/Series-Posters/Panchayat.jpg"
                           style={{}}
                         />
                       </div>
@@ -226,7 +207,7 @@ const Landingmain = () => {
                           loading="lazy"
                           data-nimg="fill"
                           className="object-cover absolute h-[100%] w-full inset-0 text-transparent"
-                          src={DBZ}
+                          src="/assets/Anime-Posters/DBZ.jpg"
                           style={{}}
                         />
                       </div>
@@ -237,7 +218,7 @@ const Landingmain = () => {
                           loading="lazy"
                           data-nimg="fill"
                           className="object-cover absolute h-[100%] w-full inset-0 text-transparent"
-                          src={suits}
+                          src="/assets/Series-Posters/Suits.jpg"
                           style={{}}
                         />
                       </div>
@@ -250,7 +231,7 @@ const Landingmain = () => {
                           loading="lazy"
                           data-nimg="fill"
                           className="object-cover absolute h-[100%] w-full inset-0 text-transparent"
-                          src={Naruto}
+                          src="/assets/Anime-Posters/Naruto.jpg"
                           style={{}}
                         />
                       </div>
@@ -261,7 +242,7 @@ const Landingmain = () => {
                           loading="lazy"
                           data-nimg="fill"
                           className="object-cover absolute h-[100%] w-full inset-0 text-transparent"
-                          src={Avengers}
+                          src="/assets/Movies-Posters/Avengers-Doomsday.jpg"
                           style={{}}
                         />
                       </div>
@@ -272,7 +253,7 @@ const Landingmain = () => {
                           loading="lazy"
                           data-nimg="fill"
                           className="object-cover absolute h-[100%] w-full inset-0 text-transparent"
-                          src={SL}
+                          src="/assets/Anime-Posters/SL.jpg"
                           style={{}}
                         />
                       </div>

@@ -10,8 +10,8 @@ const HeroBanner = ({ content }) => {
           alt={content.title}
           className="h-full w-full object-cover"
           onError={(e) => {
-            e.target.src =
-              "https://via.placeholder.com/1920x1080/1a1a1a/666?text=Banner";
+            e.target.onerror = null; // Prevent infinite loop
+            e.target.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1920' height='1080'%3E%3Crect width='1920' height='1080' fill='%231a1a1a'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='48' fill='%23666'%3EBanner%3C/text%3E%3C/svg%3E";
           }}
         />
         {/* Gradient Overlays */}

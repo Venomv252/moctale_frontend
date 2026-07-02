@@ -4,7 +4,7 @@ export const heroContent = {
   id: "hero-1",
   title: "Avengers: Doomsday",
   tagline: "The greatest threat the universe has ever faced",
-  banner: "/src/assets/Movies-Posters/Avengers-Doomsday.jpg",
+  banner: "/assets/Movies-Posters/Avengers-Doomsday.jpg",
   poster: "/assets/Movies-Posters/Avengers-Doomsday.jpg",
   type: "movie",
   genres: ["Action", "Adventure", "Sci-Fi"],

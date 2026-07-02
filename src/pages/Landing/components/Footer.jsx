@@ -1,5 +1,4 @@
 import React from "react";
-import Nagi from "../../../assets/Nagi.jpg";
 
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import {Link} from "react-router-dom";
@@ -16,7 +15,7 @@ const Footer = () => {
         >
           <img
             className="rounded-xl"
-            src={Nagi}
+            src="/assets/Nagi.jpg"
             alt="developer image"
             style={{ height: "70%", aspectRatio: "2/3" }}
           />

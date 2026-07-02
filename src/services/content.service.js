@@ -1,7 +1,10 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:8080/api/admin",
+  baseURL: [
+    "http://localhost:8080/api/admin",
+    "https://moctale-backend.onrender.com",
+  ],
   withCredentials: true,
 });
 
@@ -92,12 +95,13 @@ export const searchContent = async (filters) => {
     // If backend endpoint doesn't exist (404), fall back to client-side filtering
     if (error.response && error.response.status === 404) {
       console.warn(
-        "Backend search endpoint not available, using client-side filtering"
+        "Backend search endpoint not available, using client-side filtering",
       );
 
       // Fetch all content and filter on client
       const allContentRes = await API.get("/getContents");
-      const allContents = allContentRes.data.contents || allContentRes.data || [];
+      const allContents =
+        allContentRes.data.contents || allContentRes.data || [];
 
       // Apply filters
       let filtered = allContents;
@@ -105,14 +109,15 @@ export const searchContent = async (filters) => {
       // Filter by title
       if (filters.title) {
         filtered = filtered.filter((content) =>
-          content.title.toLowerCase().includes(filters.title.toLowerCase())
+          content.title.toLowerCase().includes(filters.title.toLowerCase()),
         );
       }
 
       // Filter by type
       if (filters.type) {
         filtered = filtered.filter(
-          (content) => content.type.toLowerCase() === filters.type.toLowerCase()
+          (content) =>
+            content.type.toLowerCase() === filters.type.toLowerCase(),
         );
       }
 
@@ -120,7 +125,7 @@ export const searchContent = async (filters) => {
       if (filters.status) {
         filtered = filtered.filter(
           (content) =>
-            content.status.toLowerCase() === filters.status.toLowerCase()
+            content.status.toLowerCase() === filters.status.toLowerCase(),
         );
       }
 
@@ -137,7 +142,7 @@ export const searchContent = async (filters) => {
       if (filters.isFeatured !== "" && filters.isFeatured !== undefined) {
         const isFeatured = filters.isFeatured === "true";
         filtered = filtered.filter(
-          (content) => content.isFeatured === isFeatured
+          (content) => content.isFeatured === isFeatured,
         );
       }
 
@@ -145,7 +150,7 @@ export const searchContent = async (filters) => {
       if (filters.isTrending !== "" && filters.isTrending !== undefined) {
         const isTrending = filters.isTrending === "true";
         filtered = filtered.filter(
-          (content) => content.isTrending === isTrending
+          (content) => content.isTrending === isTrending,
         );
       }
 
@@ -166,8 +171,8 @@ export const searchContent = async (filters) => {
 
           return filters.languages.some((filterLang) =>
             contentLanguages.some((contentLang) =>
-              contentLang.includes(filterLang.toLowerCase())
-            )
+              contentLang.includes(filterLang.toLowerCase()),
+            ),
           );
         });
       }
@@ -181,8 +186,8 @@ export const searchContent = async (filters) => {
 
           return filters.genres.some((filterGenre) =>
             contentGenres.some((contentGenre) =>
-              contentGenre.includes(filterGenre.toLowerCase())
-            )
+              contentGenre.includes(filterGenre.toLowerCase()),
+            ),
           );
         });
       }

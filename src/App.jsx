@@ -45,6 +45,7 @@ import Content from "./pages/Admin/Content.jsx";
 import Reviews from "./pages/Admin/Reviews.jsx";
 import Analytics from "./pages/Admin/Analytics.jsx";
 import Bookings from "./pages/Admin/Bookings.jsx";
+import AdminSettings from "./pages/Admin/Settings.jsx";
 
 import AdminProtectedRoute from "./routes/AdminProtectedRoute.jsx";
 import UserProtectedRoute from "./routes/UserProtectedRoute.jsx";
@@ -206,6 +207,10 @@ function App() {
                   path: "bookings",
                   element: <Bookings />,
                 },
+                {
+                  path: "settings",
+                  element: <AdminSettings />,
+                }
               ],
             },
           ],

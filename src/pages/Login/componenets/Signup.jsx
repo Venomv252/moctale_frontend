@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { PasswordShow, HidePassword } from "./LoginForm.jsx";
-import India from "../../../assets/india.svg";
+// India flag will be loaded from public folder
 import { analyzePassword } from "../../../utils/PasswordStrength.jsx";
 import useCheckUsername from "./Signup_helping_function/CheckUsername.js";
 import useCheckPhone from "./Signup_helping_function/checkPhone.js";
@@ -273,7 +273,7 @@ const Submit = async (e) => {
                       decoding="async"
                       data-nimg="1"
                       className="w-6 h-4 object-contain"
-                      src={India}
+                      src="/assets/india.svg"
                       style={{ color: "transparent" }}
                     />
                     <span className="text-gray-500 text-sm">+91 - </span>

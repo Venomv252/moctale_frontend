@@ -4,8 +4,8 @@ export const heroContent = {
   id: "hero-1",
   title: "Avengers: Doomsday",
   tagline: "The greatest threat the universe has ever faced",
-  banner: "/src/assets/Movies Posters/Avengers-Doomsday.jpg",
-  poster: "/src/assets/Movies Posters/Avengers-Doomsday.jpg",
+  banner: "/src/assets/Movies-Posters/Avengers-Doomsday.jpg",
+  poster: "/assets/Movies-Posters/Avengers-Doomsday.jpg",
   type: "movie",
   genres: ["Action", "Adventure", "Sci-Fi"],
   rating: 8.9,
@@ -20,7 +20,7 @@ export const talkOfTheTown = [
   {
     id: "tot-1",
     title: "The Wolf of Wall Street",
-    poster: "/src/assets/Movies Posters/TWoWS.jpg",
+    poster: "/assets/Movies-Posters/TWoWS.jpg",
     type: "movie",
     rating: 8.2,
     releaseYear: 2013,
@@ -30,7 +30,7 @@ export const talkOfTheTown = [
   {
     id: "tot-2",
     title: "Game of Thrones",
-    poster: "/src/assets/Series-Posters/Got.jpg",
+    poster: "/assets/Series-Posters/Got.jpg",
     type: "series",
     rating: 9.3,
     releaseYear: 2011,
@@ -40,7 +40,7 @@ export const talkOfTheTown = [
   {
     id: "tot-3",
     title: "Naruto",
-    poster: "/src/assets/Anime-Poster/Naruto.jpg",
+    poster: "/assets/Anime-Posters/Naruto.jpg",
     type: "anime",
     rating: 8.4,
     releaseYear: 2002,
@@ -50,7 +50,7 @@ export const talkOfTheTown = [
   {
     id: "tot-4",
     title: "The Godfather",
-    poster: "/src/assets/Movies Posters/TGF.jpg",
+    poster: "/assets/Movies-Posters/TGF.jpg",
     type: "movie",
     rating: 9.2,
     releaseYear: 1972,
@@ -63,7 +63,7 @@ export const mostInterested = [
   {
     id: "mi-1",
     title: "Breaking Bad",
-    poster: "/src/assets/Series-Posters/BBS5.jpg",
+    poster: "/assets/Series-Posters/BBS5.jpg",
     type: "series",
     rating: 9.5,
     releaseYear: 2008,
@@ -73,7 +73,7 @@ export const mostInterested = [
   {
     id: "mi-2",
     title: "3 Idiots",
-    poster: "/src/assets/Movies Posters/Accepted.jpg",
+    poster: "/assets/Movies-Posters/Accepted.jpg",
     type: "movie",
     rating: 8.4,
     releaseYear: 2009,
@@ -83,7 +83,7 @@ export const mostInterested = [
   {
     id: "mi-3",
     title: "Dragon Ball Z",
-    poster: "/src/assets/Anime-Poster/DBZ.jpg",
+    poster: "/assets/Anime-Posters/DBZ.jpg",
     type: "anime",
     rating: 8.8,
     releaseYear: 1989,
@@ -93,7 +93,7 @@ export const mostInterested = [
   {
     id: "mi-4",
     title: "Suits",
-    poster: "/src/assets/Series-Posters/Suits.jpg",
+    poster: "/assets/Series-Posters/Suits.jpg",
     type: "series",
     rating: 8.5,
     releaseYear: 2011,
@@ -103,7 +103,7 @@ export const mostInterested = [
   {
     id: "mi-5",
     title: "The Dark Knight",
-    poster: "/src/assets/Movies Posters/BB.jpg",
+    poster: "/assets/Movies-Posters/BB.jpg",
     type: "movie",
     rating: 9.0,
     releaseYear: 2008,
@@ -116,7 +116,7 @@ export const trendingThisWeek = [
   {
     id: "tw-1",
     title: "The Dark Knight",
-    poster: "/src/assets/Movies Posters/BB.jpg",
+    poster: "/assets/Movies-Posters/BB.jpg",
     type: "movie",
     rating: 9.0,
     releaseYear: 2008,
@@ -125,7 +125,7 @@ export const trendingThisWeek = [
   {
     id: "tw-2",
     title: "Panchayat",
-    poster: "/src/assets/Series-Posters/Panchayat.jpg",
+    poster: "/assets/Series-Posters/Panchayat.jpg",
     type: "series",
     rating: 8.9,
     releaseYear: 2020,
@@ -134,7 +134,7 @@ export const trendingThisWeek = [
   {
     id: "tw-3",
     title: "Solo Leveling",
-    poster: "/src/assets/Anime-Poster/SL.jpg",
+    poster: "/assets/Anime-Posters/SL.jpg",
     type: "anime",
     rating: 8.6,
     releaseYear: 2024,
@@ -143,7 +143,7 @@ export const trendingThisWeek = [
   {
     id: "tw-4",
     title: "The Shawshank Redemption",
-    poster: "/src/assets/Movies Posters/shawshank_redemption.jpg",
+    poster: "/assets/Movies-Posters/shawshank_redemption.jpg",
     type: "movie",
     rating: 9.3,
     releaseYear: 1994,
@@ -152,7 +152,7 @@ export const trendingThisWeek = [
   {
     id: "tw-5",
     title: "Dark Season 6",
-    poster: "/src/assets/Series-Posters/DS6.jpg",
+    poster: "/assets/Series-Posters/DS6.jpg",
     type: "series",
     rating: 8.7,
     releaseYear: 2024,
@@ -161,7 +161,7 @@ export const trendingThisWeek = [
   {
     id: "tw-6",
     title: "The Demon Next Door",
-    poster: "/src/assets/Anime-Poster/TDN.jpg",
+    poster: "/assets/Anime-Posters/TDN.jpg",
     type: "anime",
     rating: 8.3,
     releaseYear: 2024,
@@ -173,7 +173,7 @@ export const nowShowing = [
   {
     id: "ns-1",
     title: "Avengers: Doomsday",
-    poster: "/src/assets/Movies Posters/Avengers-Doomsday.jpg",
+    poster: "/assets/Movies-Posters/Avengers-Doomsday.jpg",
     type: "movie",
     rating: 8.9,
     releaseYear: 2026,
@@ -183,7 +183,7 @@ export const nowShowing = [
   {
     id: "ns-2",
     title: "The Wolf of Wall Street",
-    poster: "/src/assets/Movies Posters/TWoWS.jpg",
+    poster: "/assets/Movies-Posters/TWoWS.jpg",
     type: "movie",
     rating: 8.2,
     releaseYear: 2013,
@@ -193,7 +193,7 @@ export const nowShowing = [
   {
     id: "ns-3",
     title: "The Martian",
-    poster: "/src/assets/Movies Posters/TMW.jpg",
+    poster: "/assets/Movies-Posters/TMW.jpg",
     type: "movie",
     rating: 8.0,
     releaseYear: 2015,
@@ -203,7 +203,7 @@ export const nowShowing = [
   {
     id: "ns-4",
     title: "Harry Potter",
-    poster: "/src/assets/Movies Posters/HP.jpg",
+    poster: "/assets/Movies-Posters/HP.jpg",
     type: "movie",
     rating: 7.6,
     releaseYear: 2001,
@@ -216,7 +216,7 @@ export const popularMovies = [
   {
     id: "pm-1",
     title: "The Shawshank Redemption",
-    poster: "/src/assets/Movies Posters/shawshank_redemption.jpg",
+    poster: "/assets/Movies-Posters/shawshank_redemption.jpg",
     type: "movie",
     rating: 9.3,
     releaseYear: 1994,
@@ -225,7 +225,7 @@ export const popularMovies = [
   {
     id: "pm-2",
     title: "The Godfather",
-    poster: "/src/assets/Movies Posters/TGF.jpg",
+    poster: "/assets/Movies-Posters/TGF.jpg",
     type: "movie",
     rating: 9.2,
     releaseYear: 1972,
@@ -234,7 +234,7 @@ export const popularMovies = [
   {
     id: "pm-3",
     title: "The Dark Knight",
-    poster: "/src/assets/Movies Posters/BB.jpg",
+    poster: "/assets/Movies-Posters/BB.jpg",
     type: "movie",
     rating: 9.0,
     releaseYear: 2008,
@@ -243,7 +243,7 @@ export const popularMovies = [
   {
     id: "pm-4",
     title: "3 Idiots",
-    poster: "/src/assets/Movies Posters/Accepted.jpg",
+    poster: "/assets/Movies-Posters/Accepted.jpg",
     type: "movie",
     rating: 8.4,
     releaseYear: 2009,
@@ -252,7 +252,7 @@ export const popularMovies = [
   {
     id: "pm-5",
     title: "3 Idiots",
-    poster: "/src/assets/Movies Posters/DPS.jpg",
+    poster: "/assets/Movies-Posters/DPS.jpg",
     type: "movie",
     rating: 8.1,
     releaseYear: 1989,
@@ -261,7 +261,7 @@ export const popularMovies = [
   {
     id: "pm-6",
     title: "The Wolf of Wall Street",
-    poster: "/src/assets/Movies Posters/TWoWS.jpg",
+    poster: "/assets/Movies-Posters/TWoWS.jpg",
     type: "movie",
     rating: 8.2,
     releaseYear: 2013,
@@ -273,7 +273,7 @@ export const popularSeries = [
   {
     id: "ps-1",
     title: "Breaking Bad",
-    poster: "/src/assets/Series-Posters/BBS5.jpg",
+    poster: "/assets/Series-Posters/BBS5.jpg",
     type: "series",
     rating: 9.5,
     releaseYear: 2008,
@@ -283,7 +283,7 @@ export const popularSeries = [
   {
     id: "ps-2",
     title: "Game of Thrones",
-    poster: "/src/assets/Series-Posters/Got.jpg",
+    poster: "/assets/Series-Posters/Got.jpg",
     type: "series",
     rating: 9.3,
     releaseYear: 2011,
@@ -293,7 +293,7 @@ export const popularSeries = [
   {
     id: "ps-3",
     title: "Panchayat",
-    poster: "/src/assets/Series-Posters/Panchayat.jpg",
+    poster: "/assets/Series-Posters/Panchayat.jpg",
     type: "series",
     rating: 8.9,
     releaseYear: 2020,
@@ -303,7 +303,7 @@ export const popularSeries = [
   {
     id: "ps-4",
     title: "Suits",
-    poster: "/src/assets/Series-Posters/Suits.jpg",
+    poster: "/assets/Series-Posters/Suits.jpg",
     type: "series",
     rating: 8.5,
     releaseYear: 2011,
@@ -313,7 +313,7 @@ export const popularSeries = [
   {
     id: "ps-5",
     title: "Dark Season 6",
-    poster: "/src/assets/Series-Posters/DS6.jpg",
+    poster: "/assets/Series-Posters/DS6.jpg",
     type: "series",
     rating: 8.7,
     releaseYear: 2017,
@@ -323,7 +323,7 @@ export const popularSeries = [
   {
     id: "ps-6",
     title: "A Killer Paradox",
-    poster: "/src/assets/Series-Posters/AKOSK.jpg",
+    poster: "/assets/Series-Posters/AKOSK.jpg",
     type: "series",
     rating: 7.9,
     releaseYear: 2024,
@@ -336,7 +336,7 @@ export const popularAnime = [
   {
     id: "pa-1",
     title: "Naruto",
-    poster: "/src/assets/Anime-Poster/Naruto.jpg",
+    poster: "/assets/Anime-Posters/Naruto.jpg",
     type: "anime",
     rating: 8.4,
     releaseYear: 2002,
@@ -346,7 +346,7 @@ export const popularAnime = [
   {
     id: "pa-2",
     title: "Dragon Ball Z",
-    poster: "/src/assets/Anime-Poster/DBZ.jpg",
+    poster: "/assets/Anime-Posters/DBZ.jpg",
     type: "anime",
     rating: 8.8,
     releaseYear: 1989,
@@ -356,7 +356,7 @@ export const popularAnime = [
   {
     id: "pa-3",
     title: "Solo Leveling",
-    poster: "/src/assets/Anime-Poster/SL.jpg",
+    poster: "/assets/Anime-Posters/SL.jpg",
     type: "anime",
     rating: 8.6,
     releaseYear: 2024,
@@ -366,7 +366,7 @@ export const popularAnime = [
   {
     id: "pa-4",
     title: "The Demon Next Door",
-    poster: "/src/assets/Anime-Poster/TDN.jpg",
+    poster: "/assets/Anime-Posters/TDN.jpg",
     type: "anime",
     rating: 8.3,
     releaseYear: 2024,
@@ -379,7 +379,7 @@ export const topRated = [
   {
     id: "tr-1",
     title: "Breaking Bad",
-    poster: "/src/assets/Series-Posters/BBS5.jpg",
+    poster: "/assets/Series-Posters/BBS5.jpg",
     type: "series",
     rating: 9.5,
     releaseYear: 2008,
@@ -388,7 +388,7 @@ export const topRated = [
   {
     id: "tr-2",
     title: "The Shawshank Redemption",
-    poster: "/src/assets/Movies Posters/shawshank_redemption.jpg",
+    poster: "/assets/Movies-Posters/shawshank_redemption.jpg",
     type: "movie",
     rating: 9.3,
     releaseYear: 1994,
@@ -397,7 +397,7 @@ export const topRated = [
   {
     id: "tr-3",
     title: "Game of Thrones",
-    poster: "/src/assets/Series-Posters/Got.jpg",
+    poster: "/assets/Series-Posters/Got.jpg",
     type: "series",
     rating: 9.3,
     releaseYear: 2011,
@@ -406,7 +406,7 @@ export const topRated = [
   {
     id: "tr-4",
     title: "The Godfather",
-    poster: "/src/assets/Movies Posters/TGF.jpg",
+    poster: "/assets/Movies-Posters/TGF.jpg",
     type: "movie",
     rating: 9.2,
     releaseYear: 1972,
@@ -415,7 +415,7 @@ export const topRated = [
   {
     id: "tr-5",
     title: "The Dark Knight",
-    poster: "/src/assets/Movies Posters/BB.jpg",
+    poster: "/assets/Movies-Posters/BB.jpg",
     type: "movie",
     rating: 9.0,
     releaseYear: 2008,
@@ -424,7 +424,7 @@ export const topRated = [
   {
     id: "tr-6",
     title: "Panchayat",
-    poster: "/src/assets/Series-Posters/Panchayat.jpg",
+    poster: "/assets/Series-Posters/Panchayat.jpg",
     type: "series",
     rating: 8.9,
     releaseYear: 2020,
@@ -437,7 +437,7 @@ export const recentlyReviewed = [
     id: "rr-1",
     contentId: "pa-3",
     title: "Solo Leveling",
-    poster: "/src/assets/Anime-Poster/SL.jpg",
+    poster: "/assets/Anime-Posters/SL.jpg",
     type: "anime",
     rating: 8.6,
     releaseYear: 2024,
@@ -453,7 +453,7 @@ export const recentlyReviewed = [
     id: "rr-2",
     contentId: "ps-3",
     title: "Panchayat",
-    poster: "/src/assets/Series-Posters/Panchayat.jpg",
+    poster: "/assets/Series-Posters/Panchayat.jpg",
     type: "series",
     rating: 8.9,
     releaseYear: 2020,
@@ -469,7 +469,7 @@ export const recentlyReviewed = [
     id: "rr-3",
     contentId: "pm-3",
     title: "The Dark Knight",
-    poster: "/src/assets/Movies Posters/BB.jpg",
+    poster: "/assets/Movies-Posters/BB.jpg",
     type: "movie",
     rating: 9.0,
     releaseYear: 2008,
@@ -485,7 +485,7 @@ export const recentlyReviewed = [
     id: "rr-4",
     contentId: "ps-1",
     title: "Breaking Bad",
-    poster: "/src/assets/Series-Posters/BBS5.jpg",
+    poster: "/assets/Series-Posters/BBS5.jpg",
     type: "series",
     rating: 9.5,
     releaseYear: 2008,

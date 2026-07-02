@@ -71,14 +71,8 @@ const LoginFormUser = ({ isAdminLogin }) => {
       setLoading(true);
 
       const endpoint = isAdminLogin
-        ? [
-            "http://localhost:8080/api/admin/login",
-            "https://moctale-backend.onrender.com/api/admin/login",
-          ]
-        : [
-            "http://localhost:8080/api/auth/login",
-            "https://moctale-backend.onrender.com/api/auth/login",
-          ];
+        ? "https://moctale-backend.onrender.com/api/admin/login"
+        : "https://moctale-backend.onrender.com/api/auth/login";
 
       const response = await axios.post(endpoint, {
         username,
